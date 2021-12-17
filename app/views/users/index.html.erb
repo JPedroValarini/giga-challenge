@@ -1,0 +1,49 @@
+<!-- Header -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Giga-App</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+  </form>
+</nav>
+
+<!-- Card-Grid -->
+<div class="team-boxed">
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Users</h2>
+      <p class="text-center">Deseja listar um Usuário espefico</p>
+    </div>
+    <div class="row people">
+      <% @users.each do |user| %>
+      <div class="col-md-6 col-lg-4 item">
+        <div class="box">
+
+          <h3 class="name"><%= user.name %></h3>
+          <p class="title">Musician</p>
+          <p class="description">
+            Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.
+          </p>
+          <div class="social">
+            <a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+<!-- Grid container -->
+<div class="container p-4 pb-0">
+</div>
+
+<!-- Copyright -->
+<div class="text-center p-3">
+  © 2021 Giga-App:
+  <a class="text-white" href="https://github.com/JPedroValarini">João Pedro</a>
+</div>
+<!-- Copyright -->
+</footer>

@@ -7,7 +7,7 @@ class Api
     @options = {}
   end
 
-  def users
+  def users_api
     HTTParty.get("#{BASE_URL}")
   end
 end
