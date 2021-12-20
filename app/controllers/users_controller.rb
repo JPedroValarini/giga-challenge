@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :set_api
+  require 'base64'
+  require 'open-uri'
 
   # GET /users or /users.json
   def index
@@ -11,8 +13,9 @@ class UsersController < ApplicationController
       new_user.gender = user_response["gender"]
       new_user.name = "#{user_response["name"]["first"]} #{user_response["name"]["last"]}"
       new_user.email = user_response["email"]
-      new_user.picture_encode64 = Base64.strict_encode64(user_response["picture"]["large"])
-      new_user.save!
+      img = URI.open(user_response["picture"]["large"])
+      new_user.picture_encode64 = Base64.encode64(img.read)
+      new_user.save
     end
   end
 
