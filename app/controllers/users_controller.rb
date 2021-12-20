@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @users = User.page params[:page]
     @users_response = @api_service.users_api.parsed_response["results"]
     @users_response.each do |user_response|
       new_user = User.new

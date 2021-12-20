@@ -15,7 +15,7 @@ footer {
 }
 
 a{
-  color:white !important;
+  color:black !important;
 }
 
 .team-boxed {
@@ -94,7 +94,7 @@ a{
 
 .team-boxed .social {
   font-size:18px;
-  color:#a2a8ae;
+  color:#000;
   margin-bottom:40px
 }
 
@@ -111,4 +111,11 @@ a{
 
 .team-boxed {
   margin-bottom: 90px;
+}
+
+.kami-page{
+  text-align:center;
+  position: relative;
+  left: 50%;
+  letter-spacing:2px;
 }
