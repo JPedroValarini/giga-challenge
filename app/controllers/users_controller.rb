@@ -19,6 +19,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    @users = User.where("lower(name) LIKE?","%" + params[:q] + "%")
+  end
+
   # GET /users/1 or /users/1.json
   def show
   end

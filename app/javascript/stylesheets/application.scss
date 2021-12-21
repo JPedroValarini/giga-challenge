@@ -8,6 +8,10 @@ h1{
   background-color: #343a40 !important;
 }
 
+.navbar-brand{
+  color: #007bff !important;
+}
+
 footer {
   position:fixed;
   bottom:0;
@@ -15,7 +19,7 @@ footer {
 }
 
 a{
-  color:black !important;
+  color:black;
 }
 
 .team-boxed {
@@ -117,4 +121,9 @@ a{
   text-align:center;
   margin: 0 auto;
   letter-spacing:2px;
+}
+
+#center-card{
+  margin-left: auto;
+  margin-right: auto;
 }

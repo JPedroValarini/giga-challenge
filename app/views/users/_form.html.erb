@@ -1,0 +1,11 @@
+<div class="row people">
+  <% @users.each do |user| %>
+  <div class="col-md-6 col-lg-4 item" id="center-card">
+    <div class="box">
+      <img src="data:image/png;base64,<%= user.picture_encode64 %>"/>
+      <h3 class="name"><%= user.name %></h3>
+      <p class="title">email: </br> <%= user.email %></p>
+      <p class="title">gender: </br> <%= user.gender %></p>
+    </div>
+  </div>
+  <% end %>
